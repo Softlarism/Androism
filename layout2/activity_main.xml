@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context=".ConfiguracionActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#30BE81"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PERFIL"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="16dp"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/perfil"
+                android:background="@drawable/circle_background"
+                android:contentDescription="Foto de perfil del usuario" />
+
+            <TextView
+                android:id="@+id/text_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="(Nombre de la usuario)"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/text_phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="numero nuevo"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_marginBottom="32dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cambio de correo:"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/edit_new_email"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="nuevo correo"
+                android:background="@drawable/rounded_edittext_background"
+                android:paddingHorizontal="16dp"
+                android:inputType="textEmailAddress"
+                android:gravity="center"
+                android:textColorHint="#90A4AE"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:layout_marginBottom="24dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cambio de contraseña:"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/edit_new_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="nueva contraseña"
+                android:background="@drawable/rounded_edittext_background"
+                android:paddingHorizontal="16dp"
+                android:inputType="textPassword"
+                android:gravity="center"
+                android:textColorHint="#90A4AE"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:layout_marginBottom="50dp" />
+
+            <Button
+                android:id="@+id/btn_guardar_cambios"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Guardar cambios"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#00CC78"
+                android:textSize="18sp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginBottom="20dp"
+                android:stateListAnimator="@null" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/bottom_nav_background"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp"
+        android:elevation="8dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/reporte"
+                android:tint="#00CC78"
+                android:contentDescription="Reportes" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reportes"
+                android:textSize="12sp"
+                android:textColor="#00CC78" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/alarma"
+                android:tint="#778899"
+                android:contentDescription="Alarma" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alarma"
+                android:textSize="12sp"
+                android:textColor="#778899" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/comunidad"
+                android:contentDescription="Comunidad" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comunidad"
+                android:textSize="12sp"
+                android:textColor="#778899" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@color/material_dynamic_neutral80">
+
+        <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/perfil"
+                android:tint="#778899"
+                android:contentDescription="Cuenta" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cuenta"
+                android:textSize="12sp"
+                android:textColor="#778899" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
